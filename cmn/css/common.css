@@ -1,0 +1,917 @@
+﻿@charset 'utf-8';
+
+/*------------------------------------
+ 
+ Style of form items like buttons, labels, radiobuttons etc for multi browser.
+ 
+  File name: common.css
+  Created: 2015-01-05
+  Last update: 2016-01-24
+  Author: MeiTen
+ 
+------------------------------------*/
+
+/*------------------------------------
+Comment Rule:
+------------------------------------*/
+    /* =========================================================
+     Level 1
+    ========================================================= */
+    /* Level 2
+    --------------------------------------------------------- */
+    /* ----- Lavel 3 ----- */
+    /* Inline */
+/*------------------------------------*/
+
+
+/* =========================================================
+ reset style
+========================================================= */
+
+/*default*/
+body,
+div,
+pre,
+p,
+blockquote,
+form,
+input,
+textarea,
+address,
+button {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* For Japanese */
+p {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* list */
+dl,
+dt,
+dd,
+ul,
+ol,
+li {
+    margin: 0%;
+    padding: 0%;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/* table */
+table {
+    border-collapse: collapse;
+    border-spacing: 0%;
+}
+
+th,
+td {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* etc */
+fieldset,
+img {
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+    vertical-align: top;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+
+/* init font
+--------------------------------------------------------- */
+body {
+    font-family: 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS P Gothic', sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+    color: #424242;
+}
+
+/* init tag
+--------------------------------------------------------- */
+select,
+input,
+textarea,
+button {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+textarea,
+blockquote,
+table,
+th,
+td {
+    font-size: 100%;
+}
+
+pre,
+code {
+    font: 115% monospace;
+}
+
+a,
+p {
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+a {
+    color: #007aff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #e57300;
+    text-decoration: none;
+}
+
+
+/* clearfix
+--------------------------------------------------------- */
+/* ------ clearfix ------ */
+.cf:after {
+    content: '.';
+    display: block;
+    height: 0%;
+    clear: both;
+    visibility: hidden;
+}
+
+.cf {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hides from IE-mac */
+* html .cf {
+    height: 1%;
+}
+
+.cf {
+    display: block;
+}
+
+/* End hide from IE-mac */
+
+/* ------ clear ------ */
+.clear {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+*html .clear {
+    height: 0px;
+}
+
+
+/* =========================================================
+ new style
+========================================================= */
+
+/* layout
+--------------------------------------------------------- */
+html {
+    overflow: auto;
+    margin: 0%;
+}
+
+body {
+    min-width: 980px;
+}
+
+
+/* body
+--------------------------------------------------------- */
+#body-container {
+/*
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+*/
+}
+
+
+/* =========================================================
+ common items
+========================================================= */
+
+/* buttons
+--------------------------------------------------------- */
+
+button {
+    cursor: pointer;
+}
+
+/* normal */
+.btn-flat,
+.btn-solid {
+    -webkit-appearance: none;
+    color: #ffffff;
+    border: 1px solid #808080;
+    padding: 6px 0px;
+    background-color: #808080;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* normal - mouse events */
+.btn-flat:hover,
+.btn-flat:focus,
+.btn-flat:active,
+.btn-solid:hover,
+.btn-solid:focus,
+.btn-solid:active {
+    background: none;
+    background-color: #272a31;
+}
+
+/* normal - disabled */
+.btn-flat[disabled],
+.btn-solid[disabled] {
+    cursor: default;
+    pointer-events: none;
+    background: #c3c3c3;
+    border-color: #c3c3c3;
+}
+
+/* text, solid */
+.btn-solid {
+    border-radius: 4px;
+    background: -webkit-gradient(linear, left top, left bottom,from(#808080), color-stop(0.5,#808080), color-stop(0.5,#414655),  to(#414655));
+    background: linear-gradient(to bottom, #808080 0%, #414655);
+    background-color: #808080;
+}
+
+/* text, flat */
+.btn-flat {
+    border-radius: 0px;
+}
+
+/* image and text */
+.btn-img-link {
+    color: #0a27c2;
+    vertical-align: text-bottom;
+    text-decoration: underline;
+    padding: 0px 7px 0px 30px;
+    background: url(../img/common.png) no-repeat -1px -142px;
+    border-color: transparent;
+    height: 30px;
+}
+
+/* image and text - mouse events */
+.btn-img-link:hover,
+.btn-img-link:focus,
+.btn-img-link:active {
+    color: #e57300;
+    text-decoration: none;
+}
+
+/* background image */
+.btn-bg-img {
+    color: #ffffff;
+    font-size: 12px;
+    vertical-align: text-bottom;
+    background: url(../img/common.png) no-repeat -1px -1px;
+    border: none;
+    width: 137px;
+    height: 46px;
+}
+
+/* only image */
+.btn-img {
+    vertical-align: text-bottom;
+    background: url(../img/common.png) no-repeat -1px -141px;
+    border: none;
+    height: 28px;
+    width: 28px;
+}
+
+/* exit button
+--------------------------------------------------------- */
+.btn-exit-flat,
+.btn-exit-solid {
+    -webkit-appearance: none;
+    color: #ffffff;
+    border: 1px solid #808080;
+    background: url(../img/common.png) no-repeat -1px -109px;
+    height: 34px;
+    background-color: #808080;
+    border-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-exit-flat:hover,
+.btn-exit-flat:focus,
+.btn-exit-flat:active,
+.btn-exit-solid:hover,
+.btn-exit-solid:focus,
+.btn-exit-solid:active {
+    background: url(../img/common.png) no-repeat -1px -109px;
+    background-color: #272a31;
+}
+
+/* disabled */
+.btn-exit-flat[disabled],
+.btn-exit-solid[disabled] {
+    background: url(../img/common.png) no-repeat -1px -109px;
+    cursor: default;
+    pointer-events: none;
+    background-color: #c3c3c3;
+    border-color: #c3c3c3;
+}
+
+.btn-exit-solid {
+    border-radius: 4px;
+}
+
+.btn-exit-flat {
+    border-radius: 0px;
+}
+
+
+/* text box
+--------------------------------------------------------- */
+
+/* flat and solid */
+.txt-flat,
+.txt-solid {
+    color: #555555;
+    padding: 3px 8px;
+    border: 1px solid #d3d3d3;
+    width: 100%;  /* フレキシブル対応 */
+    box-sizing: border-box;
+}
+
+
+/* flat - focus */
+.txt-flat:focus {
+    border-color: #66afe9;
+}
+
+/* flat and solid - disaled */
+.txt-flat[disabled],
+.txt-solid[disabled] {
+    background-color: #d3d3d3;
+    color: #888888;
+}
+
+/* solid */
+.txt-solid {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.075);
+}
+
+input[type='text'] {
+    -webkit-appearance: none;
+}
+
+/* flat */
+.txt-flat {
+    border-radius: 0px;
+}
+
+/* solid - focus */
+.txt-solid:focus {
+    border-color: #66afe9;
+    outline: 0px;
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.6);
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.6);
+}
+
+/* remove × mark */
+input::-ms-clear {
+    display: none;
+}
+
+textarea {
+    resize: none;
+    -webkit-appearance: none;
+}
+
+
+/* check box
+--------------------------------------------------------- */
+
+input[type='checkbox'] {
+    margin: 0px 8px 0px 10px;
+    cursor: pointer;
+}
+
+/* common */
+.check-normal,
+.check-flat,
+.check-solid {
+    display: inline-block;
+    border: 1px solid transparent;
+    cursor: pointer;
+    line-height: 2.9em;  /* 高さはem指定 */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* flat */
+.check-flat {
+    background-color: #ffffff;
+    border-color: #d3d3d3;
+}
+
+.check-flat.checked {
+    color: #ffffff;
+    background-color: #b0c4de;
+}
+
+/* solid */
+.check-solid {
+    background: -webkit-gradient(linear, left top, left bottom,from(#ffffff), to(#f8f8f8));
+    background: linear-gradient(to bottom,#ffffff 0%, #f8f8f8 100%);
+    background-color: #f8f8f8;
+    border-color: #c0c0c0;
+    border-radius: 4px;
+}
+
+.check-solid.checked {
+    color: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom,from(#b0c4de), to(#7a7aff));
+    background: linear-gradient(to bottom,#b0c4de 0%, #7a7aff 100%);
+    background-color: #b0c4de;
+}
+
+input[type='checkbox'][disabled] {
+    cursor: default;
+}
+
+/* disabled */
+.check-normal[disabled],
+.check-flat[disabled],
+.check-solid[disabled],
+.check-normal.disabled,
+.check-flat.disabled,
+.check-solid.disabled {
+    pointer-events: none;
+    color: #c0c0c0;
+    cursor: default;
+}
+
+.check-flat[disabled],
+.check-solid[disabled],
+.check-flat.disabled,
+.check-solid.disabled {
+    border-color: #dddddd;
+}
+
+
+/* radio button
+--------------------------------------------------------- */
+
+input[type='radio'] {
+    margin: 0px 8px 0px 10px;
+    cursor: pointer;
+}
+
+/* common */
+.radio-normal,
+.radio-flat,
+.radio-solid {
+    display: inline-block;
+    border: 1px solid transparent;
+    cursor: pointer;
+    line-height: 2.9em; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.radio-tgl {
+    text-align: center;
+}
+
+/* flat */
+.radio-flat {
+    background-color: #ffffff;
+    border-color: #d3d3d3;
+}
+
+/* flat - clicked */
+.radio-flat.checked {
+    background-color: #b0c4de;
+    color: #ffffff;
+}
+
+/* solid */
+.radio-solid {
+    background: -webkit-gradient(linear, left top, left bottom,from(#ffffff), to(#f8f8f8));
+    background: linear-gradient(to bottom,#ffffff 0%, #f8f8f8 100%);
+    background-color: #f8f8f8;
+    border-color: #c0c0c0;
+    border-radius: 4px;
+}
+
+/* solid - clicked */
+.radio-solid.checked {
+    background: -webkit-gradient(linear, left top, left bottom,from(#b0c4de), to(#7a7aff));
+    background: linear-gradient(to bottom,#b0c4de 0%, #7a7aff 100%);
+    background-color: #b0c4de;
+    color: #ffffff;
+}
+
+.radio-tgl > input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    outline: none;
+}
+
+input[type='radio'][disabled] {
+    cursor: default;
+}
+
+/* common - disabled */
+.radio-normal[disabled],
+.radio-flat[disabled],
+.radio-solid[disabled],
+.radio-normal.disabled,
+.radio-flat.disabled,
+.radio-solid.disabled {
+    pointer-events: none;
+    color: #c0c0c0;
+    cursor: default;
+}
+
+/* flat and solid - disabled */
+.radio-flat[disabled],
+.radio-solid[disabled],
+.radio-flat.disabled,
+.radio-solid.disabled {
+    border-color: #dddddd;
+}
+
+/* ----- images ----- */
+
+/* iamge for radio button */
+.radio-img-cmn {
+    width: 42px;
+    height: 28px;
+    display: inline-block;
+    vertical-align: middle; 
+    margin-left: 8px;
+    background: url(../img/common.png) no-repeat -1px -48px;
+}
+
+
+/* drop down list
+--------------------------------------------------------- */
+
+.select-flat,
+.select-solid {
+    color: #555555;
+    padding: 2px 8px;
+    line-height: 2em;
+    border: 1px solid #d3d3d3;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.select-solid {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.075);
+}
+
+.select-flat {
+    border-radius: 0px;
+}
+
+.select-flat:focus,
+.select-solid:focus {
+    border-color: #66afe9;
+}
+
+.select-solid:focus {
+    outline: 0px;
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.6);
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.6);
+}
+
+.select-flat[disabled],
+.select-solid[disabled] {
+    pointer-events: none;
+    background: #dddddd;
+    border-color: #c3c3c3;
+}
+
+.select-flat[multiple],
+.select-solid[multiple] {
+    height: auto;
+}
+
+
+/* close dialog button
+--------------------------------------------------------- */
+
+/* x button */
+.btn-img-close-s {
+    background: url(../img/common.png) no-repeat -1px -109px;
+    border: none;
+    height: 31px;
+    width: 31px;
+    cursor: pointer;
+}
+
+/* close button */
+.btn-img-close-l {
+    background: url(../img/common.png) no-repeat -1px -77px;
+    border: none;
+    height: 31px;
+    width: 100px;
+    cursor: pointer;
+}
+
+
+/* common
+--------------------------------------------------------- */
+
+/* change background color for error */
+.val-err {
+    background: #ffe4e1 !important;
+}
+
+
+/* loading
+--------------------------------------------------------- */
+.loading-view {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: transparent;
+    background-image: url(../img/loading.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* navigator
+--------------------------------------------------------- */
+.navigator {
+    background: #f6f6f6;
+    height: 4em;
+    margin-top: 10px;
+
+    display: table;
+    table-layout: fixed;
+    width: 98%;
+    padding: 10px 1% 0px 1%;
+    border-spacing: 6px 0px;
+}
+
+/* ----- arrow ----- */
+.arrow-base {
+    width: 10%;
+    display: table-cell;
+}
+
+.arrow {
+    width: 88%;
+    height: 3.2em;
+    position: relative;
+}
+
+.arrow:after {
+    border-top: 22px solid transparent;
+    border-bottom: 23px solid transparent;
+    content: '';
+    position: absolute;
+    left: 100%;
+}
+
+/* text */
+.arrow span {
+    position: absolute;
+
+    font-size: 12px;
+    line-height: 110%;   
+
+    top: 50%;
+    left: 50%;
+    margin-left: -2.9em;
+    margin-top: -7px;
+}
+
+/* 2rows */
+.arrow.multi-line span {
+    margin-top: -12px;
+}
+
+/* large */
+.arrow.large-font span {
+    margin-top: -10px;
+    font-size: 18px;
+}
+
+/* large and current */
+.arrow.current.large-font span {
+    font-weight: bold;
+}
+
+/* white - disabled */
+.arrow.disabled {
+    background: #ffffff;
+    color: #d0d0d0;
+}
+
+.arrow.disabled:after {
+    border-left: 15px solid #ffffff;
+}
+
+/* gray - able to progress */
+.arrow.enabled {
+    background: #e7e7e7;
+}
+
+.arrow.enabled:after {
+    border-left: 15px solid #e7e7e7;
+}
+
+/* orange - current */
+.arrow.current {
+    background: #ff8000;
+    color: #ffffff;
+}
+
+.arrow.current:after {
+    border-left: 15px solid #ff8000;
+}
+
+.arrow.enabled:hover span,
+.arrow.enabled:focus span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* tooltip
+--------------------------------------------------------- */
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip p {
+    margin:0 5px 0 0;
+    float:left;
+}
+
+.tooltip dl {
+    padding:10px;
+    display: none;
+    position: absolute;
+    width: 450px;
+    background: #fbfaeb;
+}
+
+.tooltip-flat {
+}
+
+.tooltip-solid {
+    border-radius: 10px;
+    -webkit-box-shadow: 0 3px 6px 0 rgba(000, 000, 000, 0.4);
+            box-shadow: 0 3px 6px 0 rgba(000, 000, 000, 0.4);
+}
+
+
+.tooltip .btn-img-close-s {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+
+.tooltip .btn-img-close-l {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* title */
+.tooltip dt {
+    font-weight: bold;
+    /* [上][左右][下] */
+    padding: 6px 16px 4px;
+}
+
+.tooltip dd {
+    font-size: 14px;
+    padding: 6px 16px 8px;
+}
+
+
+/* tracking panel
+--------------------------------------------------------- */
+.tracking-panel {
+    padding: 12px 12px 19px;
+    position: absolute;
+    border: 2px solid #414655;
+    background: #FFFFFF;
+    font-size: 12px;
+    min-width: 150px;
+}
+
+.tracking-panel dt {
+    font-weight: bold;
+}
+
+.tracking-panel dd {
+    margin-top: 7px;
+}
+
+/* fix position */
+.tracking-panel.stack {
+    position: fixed;
+}
+
+
+/* =========================================================
+ z-index
+========================================================= */
+
+/* 1. researved (1～10, 21～30, 41～50)
+--------------------------------------------------------- */
+
+/* 2. tracking panel (20)
+--------------------------------------------------------- */
+.tracking-panel {
+    z-index: 20;
+}
+
+/* 3. tooltip (40)
+--------------------------------------------------------- */
+.tooltip dl {
+    z-index: 40;
+}
+
+/* 4.  researved (11～19, 31～39, 51～9998)
+--------------------------------------------------------- */
+
+/* 5. loading
+--------------------------------------------------------- */
+.loading-view {
+    z-index: 9999;
+}

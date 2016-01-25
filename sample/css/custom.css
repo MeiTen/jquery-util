@@ -1,0 +1,578 @@
+@charset "utf-8";
+
+/*------------------------------------
+ 
+ Style of form items like buttons, labels, radiobuttons etc for sample.
+ 
+  File name: custom.css
+  Created: 2015-01-05
+  Last update: 2016-01-24
+  Author: MeiTen
+ 
+------------------------------------*/
+
+
+/* =========================================================
+ Sample
+========================================================= */
+
+/* layout
+--------------------------------------------------------- */
+
+.title {
+    font-size: 22px;
+    color: #2b3c78;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #EEEEEE;
+    color: #666666;
+    text-align: center;
+}
+
+.title-s {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: #FFFFDD;
+    color: #CCCCCC;
+    text-align: center;
+}
+
+
+#content-head {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 300px;
+}
+
+#content-main {
+  position: relative;
+  float: left;
+  width: 80%;
+}
+
+#content-side {
+  float: right;
+  width: 20%;
+}
+
+#content-foot {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 80px;
+  background: #f6f6f6;  
+}
+
+#content-foot #btn-back {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+
+/* Contents
+--------------------------------------------------------- */
+.content-sample-area {
+/*    background: #f9f9ff; */
+    background: #ffffff;
+    background-repeat: repeat-y;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.content-sample-area hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*.content-sample-area h2 {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: #fafafa;
+    color: #999999;
+    text-align: center;
+}
+*/
+.content-sample-area p {
+    padding-left: 5px;
+}
+
+.content-sample-area span {
+    font-size: 89%;
+    font-weight: bold;
+}
+
+.content-sample-area div {
+    margin: 5px;
+}
+
+
+/* Original
+--------------------------------------------------------- */
+
+/* line */
+.line {
+  margin-top: -5px;
+}
+
+.line li {
+  padding: 5px 14px 5px 0;
+  float: left;
+  height: 28px;
+  line-height: 28px;
+  white-space: nowrap;
+  height: auto;
+}
+
+.line.tight li {
+  padding-right: 7px;
+}
+
+.line.multi li {
+  height: auto;
+  line-height: normal;
+}
+
+.line li.widen {
+  padding-right: 14px;
+}
+
+.line li:last-child,
+.line .EOL {
+  padding-right: 0 !important;
+}
+
+.line li.last-child,
+.line .EOL {
+  padding-right: 0 !important;
+}
+
+.line .lerge {
+  min-width: 30%;
+}
+
+.line .mid {
+  min-width: 24%;
+}
+
+.line .min {
+  min-width: 20%;
+}
+
+
+/* CalcTable
+========================================================= */
+
+.custom-table {
+  border-width: 2px;
+  border-style: none solid solid none;
+  border-color: #E3E6E8;
+  background: #FFF;
+  border-collapse: separate;
+  word-wrap: break-word;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 5px 11px 4px;
+  border-width: 2px 2px 1px;
+  border-style: solid none solid solid;
+  border-color: #E3E6E8 #E3E6E8 #FFF;
+  line-height: 1.25;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.custom-table th {
+  padding-right: 0;
+  width: 90px;
+  font-weight: bold;
+}
+
+.custom-table td {
+  border-left-style: none;
+}
+
+.custom-table td.mid {
+  padding-right: 0;
+}
+
+.custom-table .joint th,
+.custom-table .joint td {
+  border-top: none;
+}
+
+.custom-table .group th,
+.custom-table .group td {
+  border-top-style: dotted;
+}
+
+.custom-table td.group {
+  border-left: 2px dotted #E3E6E8;
+}
+
+.custom-table .alone td {
+  border-left-style: solid;
+}
+
+/*.custom-table .val-err th,
+.custom-table .val-err td {
+  background-color: #FFE4E1;
+}
+
+.custom-table .val-err td {
+  background-position: 100% 0;
+}
+
+.custom-table .val-err td.mid {
+  background-position: 50% 0;
+}
+*/
+.custom-table th.clear,
+.custom-table td.clear {
+  background: none;
+}
+
+/* custom-table - line */
+
+.custom-table .line {
+  margin-top: 3px;
+  /* IE */
+  *margin: 0;
+  *top: 3px;
+
+}
+
+.custom-table .line.multi {
+  margin-top: 12px;
+  /* IE */
+  *margin: 0;
+  *top: 12px;
+}
+
+.custom-table thead {
+  background-color: #E3E6E8;
+  font-size: 115%;
+}
+
+/* custom-table - quick-calc
+========================================================= */
+
+.quick-calc {
+  table-layout: fixed;
+}
+
+.quick-calc .get-car-name {
+  margin: 7px auto 0;
+  width: 126px;
+}
+
+.quick-calc .line .put-car-type {
+  padding-right: 7px;
+}
+
+.quick-calc .td-search,
+.quick-calc .td-advice {
+  width: 168px;
+  text-align: center;
+}
+
+.quick-calc .td-rating {
+  width: 284px;
+}
+
+.quick-calc .td-advice {
+  width: 143px;
+}
+
+/* quick-calc - BtnRef */
+
+.quick-calc .td-advice .btn-ref-s {
+  margin: 0 auto;
+  width: 119px;
+  background-position: 0 -28px;
+}
+
+.quick-calc .td-advice .btn-ref-s .wrap {
+  padding-top: 7px;
+  height: 49px;
+  line-height: 21px;
+  background-position: 100% -91px;
+}
+
+/* quick-calc - deco-radio-s */
+
+.quick-calc .deco-radio-s label {
+  width: 109px;
+  background-position: -112px 0;
+}
+
+.quick-calc .deco-radio-s .check {
+  background-position: -112px -49px;
+}
+
+
+
+/* Table
+--------------------------------------------------------- */
+
+.sample-table {
+  border: 2px solid #d7dce1;
+  width: auto;
+}
+
+/* left */
+.sample-table th {
+  padding: 12px;
+  border: 1px solid #d7dce1;
+  line-height: 1.4em;
+  vertical-align: middle;
+  text-align: left;
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+
+/* right */
+.sample-table td {
+  padding: 12px;
+  border: 1px solid #d7dce1;
+  line-height: 1.4em;
+  vertical-align: middle;
+  text-align: left;
+}
+
+
+/*===================================================================
+  inline block
+===================================================================*/
+
+
+.inline-block li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 0px;
+}
+
+ul.inline-block.block3 li {
+  width: 32.7%;
+}
+
+ul.inline-block.block4 li {
+  width: 24.3%;
+}
+
+/* =========================================================
+ size for common items
+========================================================= */
+
+/* button
+--------------------------------------------------------- */
+
+button.large {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 58px;
+    width: 40%;
+}
+
+button.middle {
+    width: 18%;
+}
+
+button.small {
+    font-size: 12px;
+    width: 8%;
+}
+
+
+/* chec kbox, radio button
+--------------------------------------------------------- */
+
+label[class^='radio-'].large,
+label[class^='check-'].large {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+    width: 28%;
+}
+
+label[class^='radio-'].middle,
+label[class^='check-'].middle {
+    width: 24%;
+    margin-bottom: 5px;
+}
+
+label[class^='radio-'].small,
+label[class^='check-'].small {
+    font-size: 12px;
+    line-height: 30px;
+    width: 20%;
+}
+
+
+/* text box
+--------------------------------------------------------- */
+
+input[class^='txt-'].large,
+textarea[class^='txt-'].large,
+select.large {
+    width: 26%;  /* フレキシブル対応 */
+}
+
+input[class^='txt-'].middle,
+textarea[class^='txt-'].middle,
+select.middle {
+    width: 20%;  /* フレキシブル対応 */
+}
+
+input[class^='txt-'].small,
+textarea[class^='txt-'].small,
+select.small {
+    width: 15%;  /* フレキシブル対応 */
+}
+
+
+/* dropdown list
+--------------------------------------------------------- */
+
+select.navigator-area {
+    width: 70%;
+}
+
+select.sample-large-area {
+    width: 85%;
+}
+
+select.sample-middle-area {
+    width: 81%;
+}
+
+select.sample-small-area {
+    width: 60%;
+}
+
+
+
+/* =========================================================
+ color of buttons
+========================================================= */
+
+
+/* color : red
+--------------------------------------------------------- */
+
+button.red {
+    border: 1px solid #ce002c;
+    background-color: #d31a42;
+    -webkit-box-shadow: 0 -3px 2px 0 rgba(165, 000, 035, 1.0) inset;
+            box-shadow: 0 -3px 2px 0 rgba(165, 000, 035, 1.0) inset;
+}
+
+button[class*='-solid'].red {
+    background: -webkit-gradient(linear, left top, left bottom, from(#d31a42), color-stop(0.5,#d31a42), color-stop(0.5,#ce002c),  to(#ce002c));
+    background: linear-gradient(to bottom, #d31a42 0%, #d31a42 50%, #ce002c 50%, #ce002c);
+}
+
+button.red:hover,
+button.red:focus,
+button.red:active {
+    background: #90001f;
+}
+
+
+/* color : orange
+--------------------------------------------------------- */
+
+button.orange {
+    border: 1px solid #eb5a00;
+    background-color: #ed6b1a;
+    -webkit-box-shadow: 0 -3px 2px 0 rgba(188, 072, 000, 1.0) inset;
+            box-shadow: 0 -3px 2px 0 rgba(188, 072, 000, 1.0) inset;
+}
+
+button[class*='-solid'].orange {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ed6b1a), color-stop(0.5,#ed6b1a), color-stop(0.5,#eb5a00),  to(#eb5a00));
+    background: linear-gradient(to bottom, #ed6b1a 0%, #ed6b1a 50%, #eb5a00 50%, #eb5a00);
+}
+
+button.orange:hover,
+button.orange:focus,
+button.orange:active {
+    background: #bc4800;
+}
+
+
+/* color : blue
+--------------------------------------------------------- */
+
+button.blue {
+    border: 1px solid #1c335e;
+    background-color: #2b3c78;
+    -webkit-box-shadow: 0 -3px 2px 0 rgba(018, 033, 061, 1.0) inset;
+            box-shadow: 0 -3px 2px 0 rgba(018, 033, 061, 1.0) inset;
+}
+
+button[class*='-solid'].blue {
+    background: -webkit-gradient(linear, left top, left bottom, from(#1c335e), color-stop(0.5,#d31a42), color-stop(0.5,#1c335e),  to(#1c335e));
+    background: linear-gradient(to bottom, #2b3c78 0%, #2b3c78 50%, #1c335e 50%, #1c335e);
+}
+
+button.blue:hover,
+button.blue:focus,
+button.blue:active {
+    background: #12213d;
+}
+
+
+/* color : light blue
+--------------------------------------------------------- */
+
+button.lightblue {
+    border: 1px solid #007aff;
+    background-color: #1a88ff;
+    -webkit-box-shadow: 0 -3px 2px 0 rgba(041, 031, 255, 1.0) inset;
+            box-shadow: 0 -3px 2px 0 rgba(041, 31, 255, 1.0) inset;
+}
+
+button[class*='-solid'].lightblue {
+    background: -webkit-gradient(linear, left top, left bottom, from(#1a88ff), color-stop(0.5,#1a88ff), color-stop(0.5,#007aff),  to(#007aff));
+    background: linear-gradient(to bottom, #1a88ff 0%, #1a88ff 50%, #007aff 50%, #007aff);
+}
+
+button.lightblue:hover,
+button.lightblue:focus,
+button.lightblue:active {
+    background: #291fff;
+}
+
+
+/* color : white
+--------------------------------------------------------- */
+
+button.white {
+    color: #007aff;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+
+button[class*='-solid'].white {
+    background: -webkit-gradient(linear, left top, left bottom,from(#ffffff), color-stop(0.5,#ffffff), color-stop(0.5,#f8f8f8),  to(#f8f8f8));
+    background: linear-gradient(to bottom,#ffffff 0%,#ffffff 50%,#f8f8f8 50%,#f8f8f8);
+}
+
+button.white:hover,
+button.white:focus,
+button.white:active {
+    background: #f0f0f0;
+}

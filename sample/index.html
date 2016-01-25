@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html id="html-container" lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=980, initial-scale=1.0">
+        <script type="text/javascript" src="../cmn/js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="../cmn/js/common.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+        <link rel="stylesheet" type="text/css" href="../cmn/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    </head>
+
+    <body id="body-container">
+
+        <!-- Contents -->
+        <div id="root-body">
+
+            <!-- Header  start -->
+            <div id= "root-body-header">
+
+                <div id="content-head">
+
+                    <h1 class="title">jQuery extension</h1>
+
+                    <h2 class="title-s">Navigator</h2>
+
+                    <!-- Navigator start -->
+                    <div class="navigator" id="cmn-navigator-id">
+                        <div class="arrow-base" id="arrow-01">
+                            <div class="arrow enabled">
+                                <span>Navi 1</span>
+                            </div>
+                        </div>
+                        <div class="arrow-base" id="arrow-02">
+                            <div class="arrow enabled multi-line">
+                                <span>Navi 2<br>2 tows</span>
+                            </div>
+                        </div>
+                        <div class="arrow-base" id="arrow-03">
+                            <div class="arrow current">
+                                <span>Navi 3</span>
+                            </div>
+                        </div>
+                        <div class="arrow-base" id="arrow-04">
+                            <div class="arrow enabled multi-line">
+                                <span>Navi 4<br>2 tows</span>
+                            </div>
+                        </div>
+                        <div class="arrow-base" id="arrow-05">
+                            <div class="arrow enabled">
+                                <span>Navi 5</span>
+                            </div>
+                        </div>
+                        <div class="arrow-base" id="arrow-06">
+                            <div class="arrow disabled">
+                                <span>Navi 6</span>
+                            </div>
+                        </div>
+                        <div class="arrow-base" id="arrow-07">
+                            <div class="arrow disabled">
+                                <span>Navi 7</span>
+                            </div>
+                        </div>
+                        <div class="arrow-base" id="arrow-08">
+                            <div class="arrow disabled multi-line">
+                                <span>Navi 8<br>2 tows</span>
+                            </div>
+                        </div>
+                        <div class="arrow-base" id="arrow-09">
+                            <div class="arrow disabled">
+                                <span>Navi 9</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigator end -->
+
+
+                    <!-- 3items　Navigator start -->
+                    <div class="navigator" id="cmn-navigator-id-j">
+                        <div class="arrow-base">
+                            <div class="arrow current large-font">
+                                <span>Navi Large 1</span>
+                            </div>
+                        </div>
+                        <div class="arrow-base">
+                            <div class="arrow enabled large-font">
+                                <span>Navi Large 2</span>
+                            </div>
+                        </div>
+                        <div class="arrow-base">
+                            <div class="arrow disabled large-font">
+                                <span>Navi Large 3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3items　Navigator end -->
+
+                </div>
+
+            </div>
+            <!-- Header  end -->
+
+            <!-- Body start -->
+            <div id= "root-body-content">
+
+                <!-- Main start -->
+                <div id="content-main">
+
+                    <!-- Sample start -->
+                    <div class="content-sample-area">
+
+                        <h3>Navigator function</h3>
+
+                        <table width="100%" border="1" cellspacing="0" cellpadding="0" class="custom-table quick-calc" id="tbl-chg-style">
+                            <tr class="tbl-block" id="tbl-tab">
+                                <th>Switch Tabs</th>
+                                <td>
+                                    <ul class="line">
+                                        <li class="large">
+                                            <label>Select index</label>
+                                            <select class="select-flat navigator-area" name="select" id="select-navigator-num">
+                                               　<option>Plese select...</option>
+                                                <option value="opt-01" id="opt-01">01</option>
+                                                <option value="opt-02" id="opt-02">02</option>
+                                                <option value="opt-03" id="opt-03">03</option>
+                                                <option value="opt-04" id="opt-04">04</option>
+                                                <option value="opt-05" id="opt-05">05</option>
+                                                <option value="opt-06" id="opt-06">06</option>
+                                                <option value="opt-07" id="opt-07">07</option>
+                                                <option value="opt-08" id="opt-08">08</option>
+                                                <option value="opt-09" id="opt-09">09</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="line">
+                                        <li class="large">
+                                            <label>Select element</label>
+                                            <select class="select-flat navigator-area" name="select" id="select-navigator-tag">
+                                               　<option>Plese select...</option>
+                                                <option value="opt-01" id="opt-01">Navi 1</option>
+                                                <option value="opt-02" id="opt-02">Navi 2</option>
+                                                <option value="opt-03" id="opt-03">Navi 3</option>
+                                                <option value="opt-04" id="opt-04">Navi 4</option>
+                                                <option value="opt-05" id="opt-05">Navi 5</option>
+                                                <option value="opt-06" id="opt-06">Navi 6</option>
+                                                <option value="opt-07" id="opt-07">Navi 7</option>
+                                                <option value="opt-08" id="opt-08">Navi 8</option>
+                                                <option value="opt-09" id="opt-09">Navi 9</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr class="tbl-block group" id="tbl-txt">
+                                <th>Change text</th>
+                                <td>
+                                    <ul class="line">
+                                        <li class="large">
+                                            <label>Select index</label>
+                                            <select class="select-flat navigator-area" name="select" id="select-navigator-val-num">
+                                               　<option>Plese select...</option>
+                                                <option value="opt-01" id="opt-01">01 -> 1 row text</option>
+                                                <option value="opt-02" id="opt-02">02 -> 2 rows text</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="line">
+                                        <li class="large">
+                                            <label>Select element</label>
+                                            <select class="select-flat navigator-area" name="select" id="select-navigator-val-tag">
+                                               　<option>Plese select...</option>
+                                                <option value="opt-01" id="opt-01">Navi 3 -> 2 rows text</option>
+                                                <option value="opt-02" id="opt-02">Navi 3 -> 1 row text</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                            <p>
+                            <h2 class="title-s">Button</h2>
+
+                            <br />
+
+                            <h3>Common Button</h3>
+
+                            <button type="button" value="" id="tbm-btn-id" class="btn-flat middle">Common Button<br>flat</button>
+                            <button type="button" value="" id="tbm-btn-id" class="btn-solid middle">Common Button<br>solid</button>
+
+                            <!--  Image and text Button-->
+                            <button type="button" value="" id="tbm-btn-id" class="btn-img-link">Link Button</button>
+
+                            <!-- Image Button-->
+                            <button type="button" value="" id="tbm-btn-id" class="btn-img"></button>
+
+                            <!-- Background image and text Button -->
+                            <button type="button" value="" id="tbm-btn-id" class="btn-bg-img">BG Button</button>
+                        </p>
+
+                        <p>
+                            <h3>Exit Button</h3>
+                            <!-- Exit Button start -->
+                            <button type="button" value="" id="cmn-exit-app" class="btn-flat middle">Exit</button>
+                            <button type="button" value="" id="cmn-exit-app" class="btn-solid middle">Exit</button>
+                            <button type="button" value="" id="cmn-exit-app" class="btn-exit-flat middle">Close</button>
+                            <button type="button" value="" id="cmn-exit-app" class="btn-exit-solid middle">Close</button>
+                            <!-- Exit Button end -->
+                        </p>
+                        <br />
+
+                        <p>
+                            <h3>Close Dialog Button</h3>
+                            <!-- Close Button start -->
+                            <button type="button"　id="cmn-close-dialog" class="btn-img-close-s"></button>
+                            <button type="button"　id="cmn-close-dialog" class="btn-img-close-l"></button>
+                            <!-- Close Button end -->
+                        </p>
+
+                        <br />
+
+                        <br />
+
+                        <p>
+                            <h2 class="title-s">Common Text box</h2><br>
+
+                            <!-- Flat -->
+                            <input type="text" value="Current Input mode" style="ime-mode:auto;" id="txt-normal" class="txt-flat middle">
+                            <input type="text" value="Bg color" style="ime-mode:auto;" id="txt-normal-err" class="txt-flat  middle val-err">
+                            <input type="text" value="Hiragara Input mode" style="ime-mode:active;" id="txt-kana" class="txt-flat middle">
+                            <input type="tel" value="Alphanumeric Input mode" style="ime-mode:inactive;" id="txt-single" class="txt-flat middle">
+                            <input type="date" value="2015-01-01" style="ime-mode:inactive;" id="txt-calender" class="txt-flat middle">
+                            <textarea name="txtarea" rows="2" cols="2" style="ime-mode:auto;" id="txt-txtarea" class="txt-flat middle">Multi row</textarea>
+                        </p>
+
+                        <p>
+                            <!-- Solid -->
+                            <input type="text" value="Current Input mode" style="ime-mode:auto;" id="txt-normal-s" class="txt-solid middle">
+                            <input type="text" value="Invert bg color" style="ime-mode:auto;" id="txt-normal-err-s" class="txt-solid middle val-err">
+                            <input type="text" value="Hiragara Input mode" style="ime-mode:active;" id="txt-kana-s" class="txt-solid middle">
+                            <input type="tel" value="Alphanumeric Input mode" style="ime-mode:inactive;" id="txt-single-s" class="txt-solid middle">
+                            <input type="date" value="2015-01-01" style="ime-mode:inactive;" id="txt-calender-s" class="txt-solid middle">
+                            <textarea name="txtarea" rows="2" cols="2" style="ime-mode:auto;" id="txt-txtarea-s" class="txt-solid middle">Multi row</textarea>
+                        </p>
+
+                        <div id="scroll-to-spc"></div>
+
+                        <p>
+                            <h2 class="title-s">Common Checkbox</h2>
+                            <div id="chk-set-flat">
+                                <label class="check-flat middle"><input type="checkbox" id="check-flat01" />flat Check 1</label>
+                                <label class="check-flat middle"><input type="checkbox" id="check-flat02" />flat Check 2</label>
+                            </div>
+                            <div id="chk-set-solid">
+                                <label class="check-solid middle"><input type="checkbox" id="check-solid01" />solid Check 1</label>
+                                <label class="check-solid middle"><input type="checkbox" id="check-solid02" />solid Check 2</label>
+                            </div>
+                            <div id="chk-set-normal">
+                                <label class="check-normal middle"><input type="checkbox" id="check-normal01" />normal Check 1</label>
+                                <label class="check-normal middle"><input type="checkbox" id="check-normal02" />normal Check ２</label>
+                            </div>
+
+                            <br />
+                       </p>
+
+                        <p>
+                            <h2 class="title-s">Common Radio Button</h2>
+                            <div id="rdo-set-flat01">
+                                    <label class="radio-flat middle"><input type="radio" id="radio-flat01" name="radio-name" />flat Radio 1</label>
+                                    <label class="radio-flat middle"><input type="radio" id="radio-flat02" name="radio-name" />flat Radio 2<span class="radio-img-cmn"></span></label>
+                            </div>
+                            <div id="rdo-set-solid01">
+                                    <label class="radio-solid middle"><input type="radio" id="radio-solidB01" name="radio-name2" />solid Radio 1</label>
+                                    <label class="radio-solid middle"><input type="radio" id="radio-solidB02" name="radio-name2" />solid Radio 2</label>
+                            </div>
+                            <div id="rdo-set-flat02">
+                                    <label class="radio-flat radio-tgl middle"><input type="radio" id="radio-tgl-flat01" name="radio-name3" />flat Toggle Radio １</label>
+                                    <label class="radio-flat radio-tgl middle"><input type="radio" id="radio-tgl-flat02" name="radio-name3" />flat Toggle Radio 2</label>
+                            </div>
+                            <div id="rdo-set-solid02">
+                                    <label class="radio-solid radio-tgl middle"><input type="radio" id="radio-tgl-solid01" name="radio-name4" />solid Toggle Radio 1</label>
+                                    <label class="radio-solid radio-tgl middle"><input type="radio" id="radio-tgl-solid02" name="radio-name4" />solid Toggle Radio 2</label>
+                            </div>
+                            <div id="rdo-set-normal">
+                                    <label class="radio-normal middle"><input type="radio" id="radio-normal01" name="radio-name3" />normal Radio 1</label>
+                                    <label class="radio-normal middle"><input type="radio" id="radio-normal02" name="radio-name3" />normal Radio 2</label>
+                            </div>
+                        </p>
+
+                        <p>
+                            <h2 class="title-s">Common Drop Down List</h2>
+                            <div id="slct-set">
+                                <select class="select-flat middle" id="select-flat01" name="select-flat-name">
+                                    <option>Plese select...</option>
+                                    <optgroup label="Group１">
+                                        <option id="select-opt-01" value="opt-01" >Option 1</option>
+                                        <option id="select-opt-02" value="opt-02" >Option 2</option>
+                                    </optgroup>
+                                    <optgroup label="Group2">
+                                        <option id="select-opt-03" value="opt-03" >Option 3</option>
+                                        <option id="select-opt-04" value="opt-04" >Option 4</option>
+                                    </optgroup>
+                                </select>
+
+                                <select class="select-solid large" id="select-solid01-multi" name="select-solid-name" multiple>
+                                    <option>Plese select...</option>
+                                    <optgroup label="Group１">
+                                        <option id="select-opt-multi-01" value="opt-01" >Option 1</option>
+                                        <option id="select-opt-multi-02" value="opt-02" >Option 2</option>
+                                    </optgroup>
+                                    <optgroup label="Group2">
+                                        <option id="select-opt-multi-03" value="opt-03" >Option 3</option>
+                                        <option id="select-opt-multi-04" value="opt-04" >Option 4</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <br />
+
+                            <h3>Common Drop Down List Function</h3>
+
+                            <table width="100%" border="1" cellspacing="0" cellpadding="0" class="custom-table quick-calc" id="tbl-chg-style">
+                                <tr class="tbl-block" id="tbl-tab">
+                                    <th>Change Elements</th>
+                                    <td>
+                                        <ul class="line">
+                                            <li class="mid">
+                                                <label>Add element</label>
+                                                <select class="select-flat" name="select" id="select-add">
+                                                   　<option>Plese select...</option>
+                                                    <option value="opt-01" id="opt-add-01">first text val</option>
+                                                    <option value="opt-02" id="opt-add-02">last text val</option>
+                                                    <option value="opt-03" id="opt-add-03">Spec Pos  text val</option>
+                                                    <option value="opt-04" id="opt-add-04">first Array</option>
+                                                    <option value="opt-05" id="opt-add-05">last Array</option>
+                                                    <option value="opt-06" id="opt-add-06">Spec Pos  Array</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul class="line">
+                                            <li class="mid">
+                                                <label>Del element</label>
+                                                <select class="select-flat" name="select" id="select-remove">
+                                                   　<option>Plese select...</option>
+                                                    <option value="opt-01" id="opt-remove-01">String(Option 1)</option>
+                                                    <option value="opt-02" id="opt-remove-02">DOM Element(Option 3)</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr class="tbl-block group" id="tbl-tab">
+                                    <th>Selected</th>
+                                    <td>
+                                        <ul class="line">
+                                            <li class="mid">
+                                                <label>DeSelect</label>
+                                                <button type="button" value="" id="select-reset" class="btn-solid">Reset!</button>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </p>
+
+
+                        <p>
+
+                            <h2 class="title-s">Tooltip</h2>
+
+                            <br /><br /><br />
+ 
+                            <!-- flat Tooltip -->
+                            <div id="tool-click-id"  class="tooltip">
+                                <p>Flat for click</p>
+                                <button type="button" id="btn-tooltip" class="btn-img tooltip-trigger"></button>
+                                <dl class="tooltip-flat">
+                                    <dt>Tooltip Title</dt>
+                                    <dd>This is the content of the Tooltip.</dd>
+                                </dl>
+                            </div>
+
+                            <br /><br /><br /><br /><br />
+
+                            <!-- 「立体矩形」Tooltip -->
+                            <div id="tool-hover-id" class="tooltip">
+                                <p>Solid for hover</p>
+                                <button type="button" id="btn-tooltip" class="btn-img tooltip-trigger"></button>
+                                <dl class="tooltip-solid">
+                                    <dt>Tooltip Title</dt>
+                                    <dd>This is the content of the Tooltip.</dd>
+                                </dl>
+                            </div>
+                        </p>
+
+                        <br /><br /><br />
+
+
+                       　<p>
+                            <h2 class="title-s">Tracking Panel</h2>
+                            <button type="button" value="" id="btn-trk-panel" class="btn-solid middle">Switch Display</button>
+                        </p>
+
+                        <h1 class="title">Utility</h1>
+
+                        <p>
+                            <h2 class="title-s">Accordion</h2>
+                            <button type="button" value="" id="btn-accordion" class="btn-flat middle">(+) Open</button>
+                            <div id="div-accordion" style='display:none;'>
+                                <p>
+                                    accordion accordion accordion accordion accordion 
+                                    accordion accordion accordion accordion accordion 
+                                    accordion accordion accordion accordion accordion 
+                                    accordion accordion accordion accordion accordion 
+                                    accordion accordion accordion accordion accordion 
+                                    accordion accordion accordion accordion accordion 
+                                    accordion accordion accordion accordion accordion 
+                                    accordion accordion accordion accordion accordion 
+                                </p>
+                            </div>
+                        </p>
+
+                        <p>
+                            <h2 class="title-s">Bg color・Activate</h2>
+                        </p>
+
+                        <!-- Flat Button、Text -->
+
+                        <table width="100%" border="1" cellspacing="0" cellpadding="0" class="custom-table quick-calc" id="tbl-chg-style">
+                            <tr class="tbl-block" id="tbl-car-type">
+                                <th>Switch Display</th>
+                                <td>
+                                    <ul class="line">
+                                        <li class="large">
+                                            <label>Bg color</label>
+                                            <select class="select-flat" name="select-val-err" id="select-val-err">
+                                               　<option>Plese select...</option>
+                                                <option value="opt-valerr-01" id="opt-set-err-one">Invert bg color(True) One</option>
+                                                <option value="opt-valerr-02" id="opt-set-f-err-one">Invert bg color(False) One</option>
+                                                <option value="opt-valerr-03" id="opt-set-err-mult">Invert bg color(True) Multi</option>
+                                                <option value="opt-valerr-04" id="opt-set-f-err-mult">Invert bg color(False) Multi</option>
+                                                <option value="opt-valerr-09" id="opt-clear-err-one">Invert bg color Clear One</option>
+                                                <option value="opt-valerr-10" id="opt-clear-err-mult">Invert bg color Clear Multi</option>
+                                                <option value="opt-valerr-11" id="opt-clear-err-all">Invert bg color Clear All</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="line">
+                                        <li class="large">
+                                            <label>Activate</label>
+                                            <select class="select-flat" name="select-dsbl" id="select-dsbl">
+                                               　<option>Plese select...</option>
+                                                <optgroup label="Group１">
+                                                    <option value="opt-dsbl-01" id="opt-set-dsbl-one">Inactive(True) One</option>
+                                                    <option value="opt-dsbl-02" id="opt-set-f-dsbl-one">Inactive(False) One</option>
+                                                </optgroup>
+                                                <optgroup label="Group2">
+                                                    <option value="opt-dsbl-03" id="opt-set-dsbl-mult">Inactive(True) Multi</option>
+                                                    <option value="opt-dsbl-04" id="opt-set-f-dsbl-mult">Inactive(False) Multi</option>
+                                                    <option value="opt-dsbl-05" id="opt-set-dsbl-parent">Inactive(True) Parent element</option>
+                                                    <option value="opt-dsbl-06" id="opt-set-f-dsbl-parent">Inactive(False) Parent element</option>
+                                                </optgroup>
+                                                <optgroup label="Group3">
+                                                    <!-- <option value="opt-dsbl-07" id="opt-tgl-dsbl-one">Inactive Toggle One</option> -->
+                                                    <!-- <option value="opt-dsbl-08" id="opt-tgl-dsbl-mult">Inactive Toggle Multi</option> -->
+                                                    <option value="opt-dsbl-09" id="opt-clear-dsbl-one">Inactive Clear One</option>
+                                                    <option value="opt-dsbl-10" id="opt-clear-dsbl-mult">Inactive Clear Multi</option>
+                                                    <option value="opt-dsbl-11" id="opt-clear-dsbl-all">Inactive Clear All</option>
+                                                </optgroup>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                        <div id="change-view-sample">
+                            <table width="100%" border="1" cellspacing="0" cellpadding="0" class="custom-table">
+                                 <thead>
+                                    <th>Sample</th><td></td>
+                                 </thead>
+
+                                 <tbody>
+                                    <tr class="tbl-block" id="tbl-period-start">
+                                        <th>All Date</th>
+                                        <td>
+                                            <ul class="line">
+                                                <li class="lerge">
+                                                    <select class="select-solid sample-large-area" name="select-period-start-year-name" id="select-period-start-year">
+                                                        <optgroup label="Group１">
+                                                            <option value="opt-period-start-year-01" >2014</option>
+                                                            <option value="opt-period-start-year-02" >2015</option>
+                                                            <option value="opt-period-start-year-03" >2016</option>
+                                                        </optgroup>
+                                                        <optgroup label="Group2">
+                                                            <option value="opt-period-start-year-04" >2017</option>
+                                                            <option value="opt-period-start-year-05" >2018</option>
+                                                            <option value="opt-period-start-year-06" >2019</option>
+                                                        </optgroup>
+                                                    </select>
+                                                    Year
+                                                </li>
+                                                <li class="min">
+                                                    <select class="select-solid sample-small-area" name="select-period-start-month-name" id="select-period-start-month">
+                                                        <option value="opt-period-start-01" >01</option>
+                                                        <option value="opt-period-start-02" >02</option>
+                                                        <option value="opt-period-start-03" >03</option>
+                                                        <option value="opt-period-start-04" >04</option>
+                                                        <option value="opt-period-start-05" >05</option>
+                                                        <option value="opt-period-start-06" >06</option>
+                                                    </select>
+                                                    Month
+                                                </li>
+                                                <li class="min">
+                                                    <select class="select-solid sample-small-area" name="select-period-start-day-name" id="select-period-start-day">
+                                                        <option value="opt-period-start-01" >01</option>
+                                                        <option value="opt-period-start-02" >02</option>
+                                                        <option value="opt-period-start-03" >03</option>
+                                                        <option value="opt-period-start-04" >04</option>
+                                                        <option value="opt-period-start-05" >05</option>
+                                                        <option value="opt-period-start-06" >06</option>
+                                                    </select>
+                                                    Day
+                                                </li>
+                                                <li class="min">
+                                                    <select class="select-solid sample-middle-area" name="select-period-start-hour-name" id="select-period-start-hour">
+                                                        <option value="opt-period-start-01" >10:00</option>
+                                                        <option value="opt-period-start-02" >14:00</option>
+                                                    </select>
+                                                    Time
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="tbl-block group" id="tbl-period">
+                                        <th>No Time</th>
+                                        <td>
+                                            <ul class="line">
+                                                <li class="min">
+                                                    <select class="select-solid sample-small-area" name="select-period-year-name" id="select-period-year">
+                                                        <option value="opt-period-year-01" >01</option>
+                                                        <option value="opt-period-year-02" >02</option>
+                                                        <option value="opt-period-year-03" >03</option>
+                                                        <option value="opt-period-year-04" >04</option>
+                                                        <option value="opt-period-year-05" >05</option>
+                                                        <option value="opt-period-year-06" >06</option>
+                                                    </select>
+                                                    Year
+                                                </li>
+                                                <li class="min">
+                                                    <select class="select-solid sample-small-area" name="select-period-month-name" id="select-period-month">
+                                                        <option value="opt-period-01" >01</option>
+                                                        <option value="opt-period-02" >02</option>
+                                                        <option value="opt-period-03" >03</option>
+                                                        <option value="opt-period-04" >04</option>
+                                                        <option value="opt-period-05" >05</option>
+                                                        <option value="opt-period-06" >06</option>
+                                                    </select>
+                                                    Month
+                                                </li>
+                                                <li class="min">
+                                                    <select class="select-solid sample-small-area" name="select-period-day-name" id="select-period-day">
+                                                        <option value="opt-period-01" >01</option>
+                                                        <option value="opt-period-02" >02</option>
+                                                        <option value="opt-period-03" >03</option>
+                                                        <option value="opt-period-04" >04</option>
+                                                        <option value="opt-period-05" >05</option>
+                                                        <option value="opt-period-06" >06</option>
+                                                    </select>
+                                                    Day
+                                                </li>
+                                                <li class="min">
+                                                    <button type="button" value="" id="btn-period-end" class="btn-solid">終期入力</button>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table width="100%" border="1" cellspacing="0" cellpadding="0" class="custom-table quick-calc" id="tbl-chg-style">
+                                 <tbody>
+                                    <tr class="tbl-block joint" id="tbl-period-first">
+                                        <th>YearMonth</th>
+                                        <td>
+                                            <ul class="line">
+                                                <li class="lerge">
+                                                    <select class="select-solid sample-middle-area" name="select-period-first-year-name" id="select-period-first-year">
+                                                        <option value="opt-period-first-year-01" >2014</option>
+                                                        <option value="opt-period-first-year-02" >2015</option>
+                                                        <option value="opt-period-first-year-03" >2016</option>
+                                                        <option value="opt-period-first-year-04" >2017</option>
+                                                        <option value="opt-period-first-year-05" >2018</option>
+                                                        <option value="opt-period-first-year-06" >2019</option>
+                                                    </select>
+                                                    Year
+                                                </li>
+                                                <li class="min">
+                                                    <select class="select-solid sample-small-area" name="select-period-first-month-name" id="select-period-first-month">
+                                                        <option value="opt-period-first-01" >01</option>
+                                                        <option value="opt-period-first-02" >02</option>
+                                                        <option value="opt-period-first-03" >03</option>
+                                                        <option value="opt-period-first-04" >04</option>
+                                                        <option value="opt-period-first-05" >05</option>
+                                                        <option value="opt-period-first-06" >06</option>
+                                                    </select>
+                                                    Month
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="tbl-block group" id="tbl-car-type">
+                                        <th>Text<br>Button<br>Check</th>
+                                        <td>
+                                            <ul class="line">
+                                                <li class="lerge">
+                                                    <input type="text" value="" style="ime-mode:auto;" id="txt-car-type" class="txt-solid">
+                                                </li>
+                                                <li class="min">
+                                                    <button type="button" value="" id="btn-search-car" class="btn-solid">Button</button>
+                                                </li>
+                                                <li class="min">
+                                                    <label class="check-normal"><input type="checkbox" id="check-car-type" />Check</label>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="tbl-block" id="tbl-car-use">
+                                        <th>Select</th>
+                                        <td>
+                                            <ul class="line">
+                                                <li class="lerge">
+                                                    <select class="select-solid" name="select-car-use-name" id="select-car-use-year">
+                                                        <option value="opt-car-use-01" >Option 1</option>
+                                                        <option value="opt-car-use-02" >Option 2</option>
+                                                    </select>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="tbl-block group" id="tbl-car-type">
+                                        <th>RadioButton</th>
+                                        <td>
+                                            <ul class="line">
+                                                <div id="radio-contract-set">
+                                                    <li class="lerge">
+                                                        <label class="radio-solid" ><input type="radio" id="radio-contract-type" name="radio-contract-type" />Select 1</label>
+                                                        <label class="radio-solid" ><input type="radio" id="radio-contract-type" name="radio-contract-type" />Select 2</label>
+                                                    </li>
+                                                </div>
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                       　<p>
+                            <h2 class="title-s">Scrool view</h2>
+
+                            <button type="button" value="" id="btn-scroll-top" class="btn-solid middle">Page top</button>
+                            <button type="button" value="" id="btn-scroll-spc" class="btn-solid middle">Spec Pos</button>
+
+                        </p>
+
+                    </div>
+                    <!-- Contents end -->
+
+                </div>
+                <!-- Main end -->
+
+                <!-- Side start -->
+                <div id="content-side">
+
+                    <!-- Tracking Panel Right -->
+                    <div class="tracking-panel" id="tracking-panel-id-02">
+                        <dl>
+                            <dt>Tracking Panel Title</dt>
+                            <dd>Content：XX</dd>
+                            <dd>Content：XX</dd>
+                            <dd>Content：XX</dd>
+                            <dd>Content：XX</dd>
+                            <dd>Content：XX</dd>
+                        </dl>
+                    </div>                    
+
+                </div>
+                <!-- Side end -->
+
+            </div>
+            <!-- Body end -->
+
+
+            <!-- Body Footer start -->
+            <div id= "root-body-footer">
+
+                <!-- Footer start -->
+                <div id="content-foot">
+                    <button type="button" value="" id="btn-back" class="btn-bg-img">Footer</button>
+                </div>
+                <!-- Footer end -->
+
+            </div>
+            <!-- Body Footer end -->
+
+       </div>
+    </body>
+</html>
